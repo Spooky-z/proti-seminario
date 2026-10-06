@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PROTI-SEMINARIO"
-run/main_scene="uid://brvw0adt37bq"
+run/main_scene="uid://dpujpn4plc01y"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,14 +19,6 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-
-[file_customization]
-
-folder_colors={
-"res://Pixel Art Door Pack/": "red",
-"res://Top-Down_Retro_Interior/": "purple",
-"res://houses2D_by_Styl0o/": "teal"
-}
 
 [input]
 

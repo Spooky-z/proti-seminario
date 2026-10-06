@@ -16,7 +16,7 @@ var ventana_ignorada: Area2D = null
 @onready var temporizador: Timer = $Timer
 
 func _ready() -> void:
-	forma_vision.disabled = true  # la visión solo funciona al mirar
+	forma_vision.disabled = true
 	sensor.area_entered.connect(_on_sensor_area_entered)
 	sensor.area_exited.connect(_on_sensor_area_exited)
 	vision.body_entered.connect(_on_vision_body_entered)
