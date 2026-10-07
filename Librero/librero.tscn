@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://wg6js8wittoa"]
 
-[ext_resource type="Texture2D" uid="uid://ch6x5i4rr40nu" path="res://librero/librero.png" id="1_6240m"]
-[ext_resource type="Texture2D" uid="uid://d0hpqio8twmdb" path="res://librero/libreroNORMAL.png" id="2_bm3hv"]
+[ext_resource type="Texture2D" uid="uid://ch6x5i4rr40nu" path="res://Librero/librero.png" id="1_6240m"]
+[ext_resource type="Texture2D" uid="uid://d0hpqio8twmdb" path="res://Librero/libreroNORMAL.png" id="2_bm3hv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(32, 13)
@@ -14,8 +14,7 @@ polygon = PackedVector2Array(-16, 7, 16, 7, 16, 20, 10.019331, 20, 10, 19, -10, 
 diffuse_texture = ExtResource("1_6240m")
 normal_texture = ExtResource("2_bm3hv")
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=1639202878]
-y_sort_enabled = true
+[node name="Librero" type="StaticBody2D" unique_id=1639202878]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2051500124]
 position = Vector2(0, 40.5)
@@ -23,11 +22,9 @@ scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=967247752]
-show_behind_parent = true
 scale = Vector2(3, 3)
 occluder = SubResource("OccluderPolygon2D_d0u6y")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1211384514]
-light_mask = 2
 scale = Vector2(3, 3)
 texture = SubResource("CanvasTexture_yf5fn")
