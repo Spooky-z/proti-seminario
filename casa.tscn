@@ -151,7 +151,7 @@ position = Vector2(219, 499)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1404887435]
 light_mask = 3
-position = Vector2(336, 546)
+position = Vector2(285, 534)
 scale = Vector2(1.8399621, 1.8399621)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_g4v7s")
