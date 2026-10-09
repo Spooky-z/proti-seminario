@@ -28,6 +28,7 @@ point_count = 3
 [node name="StaticBody2D" type="StaticBody2D" unique_id=1592557316]
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=272833851]
+visible = false
 material = SubResource("ShaderMaterial_h2pqp")
 position = Vector2(0, 4.0000005)
 scale = Vector2(1.1154462, 1.1154462)
