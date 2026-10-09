@@ -20,7 +20,7 @@ texture = SubResource("CanvasTexture_g4v7s")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1989872187]
 position = Vector2(0, 3.8146973e-06)
-scale = Vector2(1.5333333, 1.3866668)
+scale = Vector2(1.658, 1.5)
 energy = 0.2
 texture = SubResource("GradientTexture2D_g4v7s")
 height = 316.0

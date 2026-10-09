@@ -159,6 +159,14 @@ sources/0 = SubResource("TileSetAtlasSource_pnlk0")
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_g4v7s"]
 polygon = PackedVector2Array(-48, 60, 48, 60, 48, -60, -48, -60)
 
+[sub_resource type="Environment" id="Environment_g4v7s"]
+background_mode = 3
+tonemap_mode = 1
+tonemap_exposure = 0.5
+glow_enabled = true
+glow_strength = 1.2
+glow_bloom = 0.63
+
 [node name="Node2D" type="Node2D" unique_id=1260422469]
 y_sort_enabled = true
 
@@ -191,3 +199,6 @@ position = Vector2(574, 315)
 
 [node name="StaticBody2D4" parent="." unique_id=551377164 instance=ExtResource("6_ld3ao")]
 position = Vector2(950, 226)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1124320088]
+environment = SubResource("Environment_g4v7s")
