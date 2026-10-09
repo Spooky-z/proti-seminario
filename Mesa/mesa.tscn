@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b1f8xy76va7fg"]
+
+[ext_resource type="Texture2D" uid="uid://21gospsirjmu" path="res://Mesa/mesa.png" id="1_bltan"]
+[ext_resource type="Texture2D" uid="uid://by4mbknd83vvy" path="res://Mesa/mesaNORMAL.png" id="2_gl0qy"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_g4v7s"]
+diffuse_texture = ExtResource("1_bltan")
+normal_texture = ExtResource("2_gl0qy")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(96, 42)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_g4v7s"]
+polygon = PackedVector2Array(48, 43, 33, 43, 33, 34, 48, 34)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=2049653260]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=158693999]
+scale = Vector2(3, 3)
+texture = SubResource("CanvasTexture_g4v7s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1268645505]
+position = Vector2(0, 22)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=2136787924]
+occluder = SubResource("OccluderPolygon2D_g4v7s")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="." unique_id=1143869782]
+position = Vector2(-81, 0)
+occluder = SubResource("OccluderPolygon2D_g4v7s")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="." unique_id=3944900]
+position = Vector2(0, -33)
+occluder = SubResource("OccluderPolygon2D_g4v7s")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="." unique_id=224404110]
+position = Vector2(-81, -33)
+occluder = SubResource("OccluderPolygon2D_g4v7s")

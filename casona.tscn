@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://b0vo6pgwag827"]
 
-[ext_resource type="Texture2D" uid="uid://jrg4kmt8yiwe" path="res://tiles_casa.png" id="1_kwe31"]
-[ext_resource type="Texture2D" uid="uid://bh47qsdfgr8ns" path="res://light.png" id="2_tsfct"]
-[ext_resource type="PackedScene" uid="uid://wg6js8wittoa" path="res://librero/librero.tscn" id="3_3d3v8"]
-[ext_resource type="PackedScene" uid="uid://b3bqumqa2kn0h" path="res://mesita+.tscn" id="4_tsfct"]
-[ext_resource type="PackedScene" uid="uid://djy6xnfincquf" path="res://pj.tscn" id="5_3d3v8"]
-[ext_resource type="PackedScene" uid="uid://obuuu0hywte5" path="res://ventana.tscn" id="6_y5beh"]
+[ext_resource type="Texture2D" uid="uid://c50ln71l6u10k" path="res://tiles_casa.png" id="1_kwe31"]
+[ext_resource type="Texture2D" path="res://light.png" id="2_tsfct"]
+[ext_resource type="PackedScene" uid="uid://wg6js8wittoa" path="res://Librero/librero.tscn" id="3_3d3v8"]
+[ext_resource type="PackedScene" path="res://mesita+.tscn" id="4_tsfct"]
+[ext_resource type="PackedScene" uid="uid://djy6xnfincquf" path="res://Sofi/pj.tscn" id="5_3d3v8"]
+[ext_resource type="PackedScene" uid="uid://obuuu0hywte5" path="res://Ventana/ventana.tscn" id="6_y5beh"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kwe31"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
