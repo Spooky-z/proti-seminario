@@ -7,6 +7,21 @@
 [ext_resource type="PackedScene" uid="uid://b1f8xy76va7fg" path="res://Mesa/mesa.tscn" id="5_ld3ao"]
 [ext_resource type="PackedScene" uid="uid://dfflkl8mulvpt" path="res://Puerta/puerta.tscn" id="6_ld3ao"]
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ld3ao"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dw3ss"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wwc0f"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uh6m2"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hekb4"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pnlk0"]
 texture = ExtResource("1_4ic5q")
 0:0/0 = 0
@@ -104,6 +119,7 @@ texture = ExtResource("1_4ic5q")
 0:4/0 = 0
 0:4/0/terrain_set = 0
 0:4/0/terrain = 2
+0:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_ld3ao")
 0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:4/0/terrains_peering_bit/right_side = 2
 0:4/0/terrains_peering_bit/bottom_right_corner = 2
@@ -115,6 +131,7 @@ texture = ExtResource("1_4ic5q")
 2:4/0 = 0
 2:4/0/terrain_set = 0
 2:4/0/terrain = 2
+2:4/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_uh6m2")
 2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:4/0/terrains_peering_bit/bottom_side = 2
 2:4/0/terrains_peering_bit/bottom_left_corner = 2
@@ -124,6 +141,7 @@ texture = ExtResource("1_4ic5q")
 0:5/0 = 0
 0:5/0/terrain_set = 0
 0:5/0/terrain = 2
+0:5/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dw3ss")
 0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:5/0/terrains_peering_bit/right_side = 2
 0:5/0/terrains_peering_bit/top_side = 2
@@ -131,6 +149,7 @@ texture = ExtResource("1_4ic5q")
 1:5/0 = 0
 1:5/0/terrain_set = 0
 1:5/0/terrain = 2
+1:5/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_wwc0f")
 1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:5/0/terrains_peering_bit/right_side = 2
 1:5/0/terrains_peering_bit/left_side = 2
@@ -140,12 +159,14 @@ texture = ExtResource("1_4ic5q")
 2:5/0 = 0
 2:5/0/terrain_set = 0
 2:5/0/terrain = 2
+2:5/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_hekb4")
 2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:5/0/terrains_peering_bit/left_side = 2
 2:5/0/terrains_peering_bit/top_left_corner = 2
 2:5/0/terrains_peering_bit/top_side = 2
 
 [sub_resource type="TileSet" id="TileSet_yf5fn"]
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "piso"
@@ -162,10 +183,14 @@ polygon = PackedVector2Array(-48, 60, 48, 60, 48, -60, -48, -60)
 [sub_resource type="Environment" id="Environment_g4v7s"]
 background_mode = 3
 tonemap_mode = 1
-tonemap_exposure = 0.5
+tonemap_exposure = 1.5
 glow_enabled = true
+glow_intensity = 0.1
 glow_strength = 1.2
 glow_bloom = 0.63
+adjustment_enabled = true
+adjustment_brightness = 0.8
+adjustment_saturation = 1.5
 
 [node name="Node2D" type="Node2D" unique_id=1260422469]
 y_sort_enabled = true
