@@ -90,6 +90,7 @@ scale = Vector2(-40.67169, 38.72425)
 amount = 25
 texture = ExtResource("6_0525u")
 lifetime = 16.14
+preprocess = 10.0
 randomness = 1.0
 emission_shape = 3
 emission_rect_extents = Vector2(3.695, 3.075)

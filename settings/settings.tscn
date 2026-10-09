@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://dv0liu84dpofb"]
+
+[ext_resource type="Script" uid="uid://xhhtexhijdmx" path="res://settings/volumen.gd" id="1_i854f"]
+[ext_resource type="Script" uid="uid://wu1tphrlooop" path="res://settings/settings.gd" id="1_iirne"]
+[ext_resource type="Texture2D" uid="uid://kdfxda5fuvdi" path="res://settings/setting.png" id="1_prb04"]
+[ext_resource type="FontFile" uid="uid://drp44api5audn" path="res://settings/W95F.otf" id="2_qsoik"]
+[ext_resource type="Texture2D" uid="uid://bfq1458o343ep" path="res://settings/audioSI.png" id="4_u2716"]
+[ext_resource type="Texture2D" uid="uid://c3ot28yfhyiam" path="res://settings/audioNO.png" id="5_m20js"]
+[ext_resource type="Texture2D" uid="uid://dmoso016w1nx2" path="res://settings/salir1.png" id="5_o63b0"]
+[ext_resource type="Texture2D" uid="uid://754ay3hrdtbx" path="res://settings/salir2.png" id="6_cj201"]
+[ext_resource type="Texture2D" uid="uid://cu06ralkynq5h" path="res://settings/slide.png" id="6_m20js"]
+[ext_resource type="Texture2D" uid="uid://bbdqd43hwepy3" path="res://settings/salir3.png" id="7_u2716"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4v7s"]
+texture = ExtResource("1_prb04")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u2716"]
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m20js"]
+bg_color = Color(0.003921569, 0, 0.53333336, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ogv8"]
+bg_color = Color(0.003921569, 0, 0.53333336, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ivjpp"]
+texture = ExtResource("5_o63b0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jo7dw"]
+texture = ExtResource("6_cj201")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w28uq"]
+texture = ExtResource("7_u2716")
+
+[node name="Control" type="Control" unique_id=262971843]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iirne")
+
+[node name="Panel" type="Panel" parent="." unique_id=432905921]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g4v7s")
+
+[node name="Label" type="Label" parent="Panel" unique_id=452783925]
+layout_mode = 0
+offset_left = 349.0
+offset_top = 81.0
+offset_right = 480.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_qsoik")
+theme_override_font_sizes/font_size = 33
+text = "SETTINGS"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2020468865]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -219.75
+offset_top = -190.0
+offset_right = 219.75
+offset_bottom = 214.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=746544125]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=1128112761]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qsoik")
+text = "VOLUME"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer" unique_id=407623575]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1648146911]
+layout_mode = 2
+theme_override_icons/checked = ExtResource("5_m20js")
+theme_override_icons/unchecked = ExtResource("4_u2716")
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/VBoxContainer/HBoxContainer" unique_id=589486429]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_icons/grabber = ExtResource("6_m20js")
+theme_override_icons/grabber_highlight = ExtResource("6_m20js")
+theme_override_icons/grabber_disabled = ExtResource("6_m20js")
+theme_override_styles/slider = SubResource("StyleBoxFlat_u2716")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_m20js")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_8ogv8")
+max_value = 1.0
+step = 0.05
+value = 0.5
+script = ExtResource("1_i854f")
+audio_bus_name = "Master"
+
+[node name="Button" type="Button" parent="." unique_id=2073979940]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 580.0
+offset_right = 336.0
+offset_bottom = 643.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ivjpp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jo7dw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w28uq")
+
+[connection signal="toggled" from="VBoxContainer/VBoxContainer/HBoxContainer/CheckBox" to="." method="_on_mute_toggled"]
+[connection signal="value_changed" from="VBoxContainer/VBoxContainer/HBoxContainer/HSlider" to="VBoxContainer/VBoxContainer/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

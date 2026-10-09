@@ -239,11 +239,11 @@ position = Vector2(394, 400)
 [node name="StaticBody2D4" parent="." unique_id=551377164 instance=ExtResource("6_ld3ao")]
 position = Vector2(950, 226)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1124320088]
-environment = SubResource("Environment_g4v7s")
-
 [node name="StaticBody2D5" parent="." unique_id=1502811915 instance=ExtResource("7_dw3ss")]
 position = Vector2(568, 254)
 
 [node name="StaticBody2D6" parent="." unique_id=1430581160 instance=ExtResource("8_wwc0f")]
 position = Vector2(589, 396)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1124320088]
+environment = SubResource("Environment_g4v7s")

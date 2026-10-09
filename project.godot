@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="PROTI-SEMINARIO"
-run/main_scene="uid://dpujpn4plc01y"
+run/main_scene="uid://q3ra60ae6gu0"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://djxp5r0ad1ci2"
 
 [display]
 
