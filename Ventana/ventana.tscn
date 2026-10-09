@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://obuuu0hywte5"]
 
+[ext_resource type="Script" uid="uid://ch5vi1jksj8ge" path="res://Ventana/ventana.gd" id="1_n86mo"]
 [ext_resource type="Texture2D" uid="uid://bv7iur781n1td" path="res://Ventana/ventana.png" id="3_n86mo"]
 [ext_resource type="Texture2D" uid="uid://bg2skpts7ohrp" path="res://Ventana/lus.png" id="5_2x6nm"]
 [ext_resource type="Texture2D" uid="uid://d2n12pgvh756p" path="res://Ventana/particula.png" id="6_0525u"]
@@ -59,7 +60,8 @@ shader_parameter/emission_color = Color(1, 1, 1, 1)
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2465517, 1), 0.0, 0.0, 0, 0, Vector2(0.5775862, 0.8231511), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=1592557316]
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1592557316 groups=["windows"]]
+script = ExtResource("1_n86mo")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=272833851]
 material = SubResource("ShaderMaterial_h2pqp")
@@ -97,3 +99,12 @@ initial_velocity_max = 0.2
 scale_amount_min = 3.0
 scale_amount_max = 3.0
 scale_amount_curve = SubResource("Curve_dvo51")
+
+[node name="Detection area" type="CollisionPolygon2D" parent="." unique_id=2129592946]
+visible = false
+polygon = PackedVector2Array(1, 0, -150, 150, 150, 150)
+
+[node name="Timer" type="Timer" parent="." unique_id=1962308454]
+wait_time = 10.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
