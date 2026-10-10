@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cuwxuci5tdfc5" path="res://TV/tv.tscn" id="7_dw3ss"]
 [ext_resource type="PackedScene" uid="uid://clbowqrfgrjg6" path="res://Sillon/sillon.tscn" id="8_wwc0f"]
 [ext_resource type="AudioStream" uid="uid://b7057l5nacutd" path="res://FNAF 4 Ambience Extended Mix.mp3" id="10_hekb4"]
+[ext_resource type="Script" uid="uid://xx5thf5txeqk" path="res://bañito.gd" id="11_8vbf0"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ld3ao"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -196,6 +197,9 @@ adjustment_enabled = true
 adjustment_brightness = 0.8
 adjustment_saturation = 1.5
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djfhu"]
+size = Vector2(91.46, 38.635)
+
 [node name="Node2D" type="Node2D" unique_id=1260422469]
 y_sort_enabled = true
 script = ExtResource("1_uh6m2")
@@ -256,3 +260,13 @@ stream = ExtResource("10_hekb4")
 autoplay = true
 bus = &"SFX"
 parameters/looping = true
+
+[node name="bañito" type="Area2D" parent="." unique_id=1761652085]
+position = Vector2(961.7181, 319.81802)
+script = ExtResource("11_8vbf0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bañito" unique_id=1351575116]
+position = Vector2(-10.718079, -12.818024)
+shape = SubResource("RectangleShape2D_djfhu")
+
+[connection signal="body_entered" from="bañito" to="bañito" method="_on_body_entered"]
