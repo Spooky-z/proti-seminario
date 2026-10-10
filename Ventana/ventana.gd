@@ -15,6 +15,7 @@ var player: CharacterBody2D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	busy = false
 	timer.one_shot = true
 	startRandomTimer()
 
@@ -64,6 +65,7 @@ func attacking():
 		print("te wa'se mielda")
 		player.queue_free()
 		player = null
+		Transicion.change_scene("res://Game Over/gameover.tscn")
 		
 func retreating():
 	isWatching = false
