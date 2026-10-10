@@ -60,7 +60,7 @@ shader_parameter/emission_color = Color(1, 1, 1, 1)
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2465517, 1), 0.0, 0.0, 0, 0, Vector2(0.5775862, 0.8231511), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=1592557316 groups=["windows"]]
+[node name="Ventana" type="StaticBody2D" unique_id=1592557316 groups=["windows"]]
 script = ExtResource("1_n86mo")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=272833851]
@@ -105,7 +105,7 @@ scale_amount_curve = SubResource("Curve_dvo51")
 visible = false
 polygon = PackedVector2Array(1, 0, -150, 150, 150, 150)
 
-[node name="Timer" type="Timer" parent="." unique_id=1962308454]
+[node name="Timer" type="Timer" parent="." unique_id=1962308454 groups=["windows"]]
 wait_time = 10.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
