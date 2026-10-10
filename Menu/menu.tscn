@@ -42,16 +42,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -82.0
-offset_top = -261.0
-offset_right = 82.0
-offset_bottom = -244.0
+offset_left = -366.0
+offset_top = -264.0
+offset_right = 366.0
+offset_bottom = -231.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.14819999, 0.78, 0.36933008, 1)
 theme_override_fonts/font = ExtResource("3_raj00")
 theme_override_font_sizes/font_size = 34
-text = "NOMBRE DE JUEGO NOSE WACHO"
+text = "ACECHO TU VENTANA"
+horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1519936419]
 layout_mode = 1

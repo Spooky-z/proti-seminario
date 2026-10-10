@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://djxp5r0ad1ci2"
 
 Transicion="*uid://clfk8q3aeoxul"
 MenuMusica="*uid://ce3mraknrn8av"
+Config="*uid://dc2ep27umcrtp"
 
 [display]
 
