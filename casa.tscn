@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c50ln71l6u10k" path="res://tiles_casa.png" id="1_4ic5q"]
 [ext_resource type="PackedScene" uid="uid://djy6xnfincquf" path="res://Sofi/pj.tscn" id="1_427ab"]
+[ext_resource type="Script" uid="uid://b3cp1ww6h0ii4" path="res://casa.gd" id="1_uh6m2"]
 [ext_resource type="PackedScene" uid="uid://wg6js8wittoa" path="res://Librero/librero.tscn" id="3_v8ver"]
 [ext_resource type="PackedScene" uid="uid://obuuu0hywte5" path="res://Ventana/ventana.tscn" id="4_pnlk0"]
 [ext_resource type="PackedScene" uid="uid://b1f8xy76va7fg" path="res://Mesa/mesa.tscn" id="5_ld3ao"]
@@ -196,6 +197,7 @@ adjustment_saturation = 1.5
 
 [node name="Node2D" type="Node2D" unique_id=1260422469]
 y_sort_enabled = true
+script = ExtResource("1_uh6m2")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=166051213]
 offset_right = 40.0

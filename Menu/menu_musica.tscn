@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ce3mraknrn8av"]
+
+[ext_resource type="AudioStream" uid="uid://ch0oj754srq8v" path="res://Main Theme  Pirates of the Caribbean.mp3" id="1_45qo3"]
+
+[node name="MenuMusica" type="AudioStreamPlayer" unique_id=135412030]
+stream = ExtResource("1_45qo3")
+volume_db = -5.0
+autoplay = true
+bus = &"Musica"
