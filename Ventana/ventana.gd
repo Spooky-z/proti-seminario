@@ -1,37 +1,32 @@
-extends StaticBody2D
+extends Node2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var timer: Timer = $Timer
+@onready var detectionRange: Area2D = $Area2D
 
-var isApproaching: bool
+var isApproachingWindow: bool
 var isWatching: bool
 var isLeaving: bool
 
+var player: CharacterBody2D = null
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#startRandomTimer()
+	timer.one_shot = true
+	startRandomTimer()
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-#func startRandomTimer():
-	#timer.wait_time = randf_range(3.0, 8.0)
-	#timer.start()
-	#print(timer.wait_time)
+func startRandomTimer():
+	timer.wait_time = randf_range(1.75, 8.0)
+	timer.start()
+	print(timer.wait_time)
 
-func warning():
-	isWatching = false
-	isApproaching = true
-	animated_sprite_2d.play("warning")
-	
-	
-func watching():
-	isApproaching = false
-	isWatching = true
-	animated_sprite_2d.play("scoobydrilo")
-	
+
 
 #func selectRandomWindow():
 	#var windows = get_tree().get_nodes_in_group("windows")
@@ -41,4 +36,47 @@ func watching():
 	#chooseWindow.Warning()
 
 func _on_timer_timeout() -> void:
+	await warning()
+	startRandomTimer()
+
+func crocodileCycle():
 	warning()
+	await get_tree().create_timer(1.0).timeout
+	attacking()
+	await get_tree().create_timer(1.0).timeout
+	retreating()
+	await get_tree().create_timer(1.0).timeout
+	idle()
+	
+func warning():
+	isWatching = false
+	isApproachingWindow = true
+	animated_sprite_2d.play("warning")
+	if player != null:
+		print("te veo")
+	await get_tree().create_timer(1.0).timeout
+	attacking()
+
+func attacking():
+	isApproachingWindow = false
+	isWatching = true
+	animated_sprite_2d.play("scoobydrilo")
+	if player != null:
+		print("te wa'se mielda")
+		
+func retreating():
+	isWatching = false
+	isLeaving = true
+	animated_sprite_2d.play("warning")
+	
+func idle():
+	isLeaving = false
+	animated_sprite_2d.play("idle")
+	
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		player = body
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body == player:
+		player = null

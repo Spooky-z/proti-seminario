@@ -60,7 +60,7 @@ shader_parameter/emission_color = Color(1, 1, 1, 1)
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.2465517, 1), 0.0, 0.0, 0, 0, Vector2(0.5775862, 0.8231511), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[node name="Ventana" type="StaticBody2D" unique_id=1592557316 groups=["windows"]]
+[node name="Ventana" type="Node2D" unique_id=1289534473 groups=["windows"]]
 script = ExtResource("1_n86mo")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=272833851]
@@ -86,7 +86,8 @@ texture = ExtResource("5_2x6nm")
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=371143559]
 material = SubResource("ShaderMaterial_dvo51")
 position = Vector2(0, 95.99999)
-scale = Vector2(-40.67169, 38.72425)
+rotation = -3.1415927
+scale = Vector2(40.67169, -38.72425)
 amount = 25
 texture = ExtResource("6_0525u")
 lifetime = 16.14
@@ -101,11 +102,16 @@ scale_amount_min = 3.0
 scale_amount_max = 3.0
 scale_amount_curve = SubResource("Curve_dvo51")
 
-[node name="Detection area" type="CollisionPolygon2D" parent="." unique_id=2129592946]
-visible = false
-polygon = PackedVector2Array(1, 0, -150, 150, 150, 150)
+[node name="Area2D" type="Area2D" parent="." unique_id=1560545848 groups=["windows"]]
+
+[node name="Detection area" type="CollisionPolygon2D" parent="Area2D" unique_id=2129592946]
+position = Vector2(0, 35)
+scale = Vector2(1.3496732, 3.4416664)
+polygon = PackedVector2Array(25, 0, -25, 0, -370, 125, 380, 125)
 
 [node name="Timer" type="Timer" parent="." unique_id=1962308454 groups=["windows"]]
-wait_time = 10.0
+autostart = true
 
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
