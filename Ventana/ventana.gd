@@ -4,6 +4,8 @@ extends Node2D
 @onready var timer: Timer = $Timer
 @onready var detectionRange: Area2D = $Area2D
 
+static var busy := false
+
 var isApproachingWindow: bool
 var isWatching: bool
 var isLeaving: bool
@@ -15,7 +17,6 @@ var player: CharacterBody2D = null
 func _ready() -> void:
 	timer.one_shot = true
 	startRandomTimer()
-	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -24,9 +25,6 @@ func _process(delta: float) -> void:
 func startRandomTimer():
 	timer.wait_time = randf_range(1.75, 8.0)
 	timer.start()
-	print(timer.wait_time)
-
-
 
 #func selectRandomWindow():
 	#var windows = get_tree().get_nodes_in_group("windows")
@@ -36,7 +34,10 @@ func startRandomTimer():
 	#chooseWindow.Warning()
 
 func _on_timer_timeout() -> void:
-	await warning()
+	if not busy:
+		busy = true
+		await crocodileCycle()
+		busy = false
 	startRandomTimer()
 
 func crocodileCycle():
@@ -54,8 +55,6 @@ func warning():
 	animated_sprite_2d.play("warning")
 	if player != null:
 		print("te veo")
-	await get_tree().create_timer(1.0).timeout
-	attacking()
 
 func attacking():
 	isApproachingWindow = false
@@ -63,6 +62,8 @@ func attacking():
 	animated_sprite_2d.play("scoobydrilo")
 	if player != null:
 		print("te wa'se mielda")
+		player.queue_free()
+		player = null
 		
 func retreating():
 	isWatching = false
