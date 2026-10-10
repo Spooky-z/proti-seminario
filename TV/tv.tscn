@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dme02411uwmop" path="res://TV/tv.png" id="1_v555e"]
 [ext_resource type="Texture2D" uid="uid://bg2skpts7ohrp" path="res://Ventana/lus.png" id="2_iwv72"]
+[ext_resource type="AudioStream" uid="uid://osdwhw6rgbw1" path="res://TV/Old TV static.mp3" id="3_h66ax"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iwv72"]
 atlas = ExtResource("1_v555e")
@@ -86,3 +87,10 @@ position = Vector2(11, 115)
 scale = Vector2(2.840001, 1)
 energy = 0.5
 texture = ExtResource("2_iwv72")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=565721188]
+stream = ExtResource("3_h66ax")
+volume_db = 12.48
+autoplay = true
+bus = &"SFX"
+parameters/looping = true

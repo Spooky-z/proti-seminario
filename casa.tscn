@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dfflkl8mulvpt" path="res://Puerta/puerta.tscn" id="6_ld3ao"]
 [ext_resource type="PackedScene" uid="uid://cuwxuci5tdfc5" path="res://TV/tv.tscn" id="7_dw3ss"]
 [ext_resource type="PackedScene" uid="uid://clbowqrfgrjg6" path="res://Sillon/sillon.tscn" id="8_wwc0f"]
+[ext_resource type="AudioStream" uid="uid://b7057l5nacutd" path="res://FNAF 4 Ambience Extended Mix.mp3" id="10_hekb4"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ld3ao"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -249,3 +250,9 @@ position = Vector2(589, 396)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1124320088]
 environment = SubResource("Environment_g4v7s")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1703497726]
+stream = ExtResource("10_hekb4")
+autoplay = true
+bus = &"SFX"
+parameters/looping = true

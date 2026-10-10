@@ -1,8 +1,25 @@
 extends Control
 
 
+@onready var option_button: OptionButton = $VBoxContainer/VBoxContainer/OptionButton
+const window_mode_array: Array[String] = [
+	"ventana", 
+	"pantalla completa",
+]
+
 func _ready() -> void:
-	pass
+	option_button.item_selected.connect(on_window_mode_seleccted)
+
+func add_window_mode_item()-> void:
+	for window_mode in window_mode_array:
+		option_button.add_item(window_mode)
+
+func on_window_mode_seleccted (index:int)-> void:
+	match index:
+		0:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		1:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func _on_button_pressed() -> void:
 	Transicion.change_scene("res://Menu/menu.tscn")

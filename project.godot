@@ -27,6 +27,7 @@ Config="*uid://dc2ep27umcrtp"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
