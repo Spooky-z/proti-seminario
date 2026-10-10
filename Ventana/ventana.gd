@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 	pass
 
 func startRandomTimer():
-	timer.wait_time = randf_range(1.75, 8.0)
+	timer.wait_time = randf_range(1.0, 8.0)
 	timer.start()
 
 #func selectRandomWindow():
@@ -54,15 +54,12 @@ func warning():
 	isWatching = false
 	isApproachingWindow = true
 	animated_sprite_2d.play("warning")
-	if player != null:
-		print("te veo")
 
 func attacking():
 	isApproachingWindow = false
 	isWatching = true
 	animated_sprite_2d.play("scoobydrilo")
-	if player != null:
-		print("te wa'se mielda")
+	if player != null and player.is_in_group("player"):
 		player.queue_free()
 		player = null
 		Transicion.change_scene("res://Game Over/gameover.tscn")

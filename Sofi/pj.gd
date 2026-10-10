@@ -38,9 +38,11 @@ func esconderce():
 		velocity = direction * 0
 		animated_sprite_2d.play("hide")
 		point_light_2d.visible = false
+		remove_from_group("player")
 		if not llorona.playing:
 			llorona.play()
 			
 	else: 
+		add_to_group("player")
 		point_light_2d.visible = true
 		llorona.stop()
