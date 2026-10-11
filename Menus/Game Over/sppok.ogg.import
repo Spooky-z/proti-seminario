@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://egeks0kf7liu"
+path="res://.godot/imported/sppok.ogg-dff47c8fe0d1b3c284d12f19e68dd4e3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Menus/Game Over/sppok.ogg"
+dest_files=["res://.godot/imported/sppok.ogg-dff47c8fe0d1b3c284d12f19e68dd4e3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://q3ra60ae6gu0"]
+
+[ext_resource type="Script" uid="uid://eq46tfeg2lov" path="res://Menus/Menu Main/menu.gd" id="1_hbriq"]
+[ext_resource type="Texture2D" uid="uid://icsow33iqagi" path="res://Menus/Menu Main/menu.png" id="2_2414w"]
+[ext_resource type="FontFile" uid="uid://dqnaiondj0p6j" path="res://Menus/Menu Main/DK Black Bamboo.ttf" id="3_1vhfa"]
+[ext_resource type="FontFile" uid="uid://drp44api5audn" path="res://Menus/settings/W95F.otf" id="4_7ticv"]
+[ext_resource type="Texture2D" uid="uid://djojtxec0motw" path="res://Menus/Menu Main/itch.png" id="4_org03"]
+[ext_resource type="AudioStream" uid="uid://dgr6ftehgwg6b" path="res://Menus/Menu Main/cancelMenu.ogg" id="5_1vhfa"]
+[ext_resource type="AudioStream" uid="uid://hkm51b7ivy77" path="res://Menus/Menu Main/firstLOOK.ogg" id="5_2414w"]
+[ext_resource type="Texture2D" uid="uid://jcfq2cutl3le" path="res://Menus/Menu Main/itch2.png" id="5_b4t0d"]
+[ext_resource type="Texture2D" uid="uid://dsiuknsfmdinx" path="res://Menus/Menu Main/itch1.png" id="6_qcfqq"]
+[ext_resource type="Script" uid="uid://derxnxiiaj0bw" path="res://Menus/Menu Main/itch.gd" id="7_b4t0d"]
+[ext_resource type="Texture2D" uid="uid://bjnh8n6nlkrcl" path="res://momonga.png" id="7_nyr1q"]
+[ext_resource type="Script" uid="uid://1ti8k2jry30" path="res://Menus/Menu Main/poronga.gd" id="9_qcfqq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4v7s"]
+texture = ExtResource("2_2414w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7numd"]
+texture = ExtResource("4_org03")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d0u6y"]
+texture = ExtResource("5_b4t0d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3gngh"]
+texture = ExtResource("6_qcfqq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fcnqv"]
+texture = ExtResource("7_nyr1q")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0, 0, 0, 0.29411766)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lti8b"]
+bg_color = Color(1, 1, 1, 0.78431374)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
+bg_color = Color(0, 0, 0, 0.78431374)
+
+[sub_resource type="Animation" id="Animation_hbriq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2414w"]
+resource_name = "interaction"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1vhfa"]
+_data = {
+&"RESET": SubResource("Animation_hbriq"),
+&"interaction": SubResource("Animation_2414w")
+}
+
+[node name="Control" type="Control" unique_id=163892275]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hbriq")
+
+[node name="Panel" type="Panel" parent="." unique_id=289438400]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g4v7s")
+
+[node name="Label" type="Label" parent="." unique_id=2075981140]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -366.0
+offset_top = -264.0
+offset_right = 366.0
+offset_bottom = -231.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7137255, 0.88235295, 0.5647059, 1)
+theme_override_fonts/font = ExtResource("3_1vhfa")
+theme_override_font_sizes/font_size = 34
+text = "ACECHO TU VENTANA"
+horizontal_alignment = 1
+
+[node name="itch" type="Button" parent="." unique_id=1190419369]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 580.0
+offset_right = 288.0
+offset_bottom = 588.0
+scale = Vector2(7.0842104, 7.0842104)
+theme_override_styles/normal = SubResource("StyleBoxTexture_7numd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_d0u6y")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3gngh")
+script = ExtResource("7_b4t0d")
+link_itch = "https://spooky-blue.itch.io/acechando-tu-ventana"
+
+[node name="Button" type="Button" parent="." unique_id=2098096368]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 580.0
+offset_right = 356.0
+offset_bottom = 588.0
+scale = Vector2(7.0842104, 7.0842104)
+theme_override_styles/normal = SubResource("StyleBoxTexture_fcnqv")
+script = ExtResource("9_qcfqq")
+link_importante = "file:///C:/Users/melev/OneDrive/Escritorio/Carpetas/Boludeces/Dibujitos/Mis%20dibujos/Facultad/Plan%20de%20Negocios/momonga.png"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1519936419]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -130.125
+offset_top = -194.0
+offset_right = 130.125
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=233325807]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8745098, 0.94509804, 0.7372549, 1)
+theme_override_fonts/font = ExtResource("4_7ticv")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lti8b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ouk20")
+text = "PLAY"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1886570982]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8745098, 0.94509804, 0.7372549, 1)
+theme_override_fonts/font = ExtResource("4_7ticv")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lti8b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ouk20")
+text = "SETTINGS"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1621509928]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8745098, 0.94509804, 0.7372549, 1)
+theme_override_fonts/font = ExtResource("4_7ticv")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lti8b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ouk20")
+text = "QUIT"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=980047254]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=298087602]
+libraries/ = SubResource("AnimationLibrary_1vhfa")
+
+[node name="option" type="AudioStreamPlayer2D" parent="." unique_id=1033858379]
+stream = ExtResource("5_1vhfa")
+volume_db = -5.0
+
+[node name="play" type="AudioStreamPlayer2D" parent="." unique_id=1260985083]
+stream = ExtResource("5_2414w")
+volume_db = -5.0
+
+[connection signal="pressed" from="itch" to="itch" method="_on_itchio_button_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

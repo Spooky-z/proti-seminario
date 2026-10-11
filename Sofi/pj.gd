@@ -7,8 +7,10 @@ const SPEED = 200
 var puede_esconderse: bool = false 
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var llorona: AudioStreamPlayer2D = $AudioStreamPlayer2D2
+@onready var hide_input: TextureRect = $hideInput
 
-
+func _ready():
+	hide_input.visible = false
 func _physics_process(_delta: float) -> void:
 	var direction := Input.get_vector("izquierda", "derecha", "arriba", "abajo")
 	if direction != Vector2.ZERO:
@@ -16,7 +18,6 @@ func _physics_process(_delta: float) -> void:
 		animated_sprite_2d.play("walk")
 		if not audio_stream_player_2d.playing:
 			audio_stream_player_2d.play()
-
 		if direction.x > 0:
 			point_light_2d.rotation = -PI/2
 			animated_sprite_2d.flip_h = true
@@ -27,21 +28,31 @@ func _physics_process(_delta: float) -> void:
 		velocity = Vector2.ZERO
 		animated_sprite_2d.play("idle")
 		audio_stream_player_2d.stop()
+	volver()
 	esconderce()
 	move_and_slide()
  
+func volver():
+	if Input.is_action_just_pressed("esc"):
+		Transicion.change_scene("res://Menus/Menu Main/menu.tscn")
 
 func esconderce():
 	var direction := Input.get_vector("izquierda", "derecha", "arriba", "abajo")
-	
+	if puede_esconderse:
+		hide_input.visible = true
+	else:
+		hide_input.visible = false
 	if Input.is_action_pressed("agacharse") and puede_esconderse:
 		velocity = direction * 0
-		animated_sprite_2d.play("hide")
+		animated_sprite_2d.play("hiding")
+		await get_tree().create_timer(0.5).timeout
+		hide_input.visible = false
 		point_light_2d.visible = false
 		remove_from_group("player")
 		if not llorona.playing:
 			llorona.play()
-			
+		animated_sprite_2d.play("hide")
+		pass
 	else: 
 		add_to_group("player")
 		point_light_2d.visible = true

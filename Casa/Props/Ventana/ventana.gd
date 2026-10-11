@@ -49,8 +49,7 @@ func attacking():
 	if player != null and player.is_in_group("player"):
 		player.queue_free()
 		player = null
-		Transicion.change_scene("res://Game Over/gameover.tscn")
-		
+		Transicion.change_scene("res://Menus/Game Over/gameover.tscn")
 func retreating():
 	isWatching = false
 	isLeaving = true

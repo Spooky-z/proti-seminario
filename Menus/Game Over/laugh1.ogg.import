@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3c0qe6rit1jp"
+path="res://.godot/imported/laugh1.ogg-ad0b47703470837998feb826240e52b0.oggvorbisstr"
+
+[deps]
+
+source_file="res://Menus/Game Over/laugh1.ogg"
+dest_files=["res://.godot/imported/laugh1.ogg-ad0b47703470837998feb826240e52b0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
