@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bjo3epm1lqsvn" path="res://Menus/settings/nocheck.png" id="9_c33rl"]
 [ext_resource type="Texture2D" uid="uid://cg8vhhio6pfuu" path="res://Menus/settings/resoluciones2.png" id="9_mh0mi"]
 [ext_resource type="Texture2D" uid="uid://cb0x5pqghajr2" path="res://Menus/settings/resoluciones3.png" id="9_rh3gc"]
+[ext_resource type="AudioStream" uid="uid://dgr6ftehgwg6b" path="res://Menus/Menu Main/cancelMenu.ogg" id="17_nxxx5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4v7s"]
 texture = ExtResource("1_prb04")
@@ -243,6 +244,10 @@ offset_bottom = 634.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_ivjpp")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jo7dw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_w28uq")
+
+[node name="option" type="AudioStreamPlayer2D" parent="." unique_id=2067116757]
+stream = ExtResource("17_nxxx5")
+volume_db = -5.0
 
 [connection signal="toggled" from="VBoxContainer/VBoxContainer/HBoxContainer3/CheckBox" to="." method="_on_mute_global_toggled"]
 [connection signal="value_changed" from="VBoxContainer/VBoxContainer/HBoxContainer3/HSlider" to="VBoxContainer/VBoxContainer/HBoxContainer3/HSlider" method="_on_value_changed"]

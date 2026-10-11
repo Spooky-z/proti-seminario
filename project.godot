@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PROTI-SEMINARIO"
-run/main_scene="uid://q3ra60ae6gu0"
+run/main_scene="uid://bstid7ojvudjq"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -27,10 +27,10 @@ Config="*uid://dc2ep27umcrtp"
 
 [display]
 
-window/size/mode=3
 window/size/borderless=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://n41wnw55cysr"
 
 [input]
 

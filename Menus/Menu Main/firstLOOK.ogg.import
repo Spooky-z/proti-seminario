@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://hkm51b7ivy77"
+path="res://.godot/imported/firstLOOK.ogg-7a22158f45dac634456aceb5aa317a6d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Menus/Menu Main/firstLOOK.ogg"
+dest_files=["res://.godot/imported/firstLOOK.ogg-7a22158f45dac634456aceb5aa317a6d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

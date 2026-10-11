@@ -1,6 +1,6 @@
 extends Control
 
-
+@onready var option: AudioStreamPlayer2D = $option
 @onready var option_button: OptionButton = $VBoxContainer/VBoxContainer/OptionButton
 const window_mode_array: Array[String] = [
 	"ventana", 
@@ -22,6 +22,7 @@ func on_window_mode_seleccted (index:int)-> void:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 func _on_button_pressed() -> void:
+	option.play()
 	Transicion.change_scene("res://Menus/Menu Main/menu.tscn")
 
 func _on_mute_toggled(_toggled_on: bool) -> void:

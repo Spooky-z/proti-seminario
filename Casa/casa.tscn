@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://dpujpn4plc01y"]
 
-[ext_resource type="Script" uid="uid://b3cp1ww6h0ii4" path="res://Casa/casa.gd" id="1_f8iyc"]
 [ext_resource type="Texture2D" uid="uid://c50ln71l6u10k" path="res://Casa/tiles_casa.png" id="2_6rk0h"]
 [ext_resource type="PackedScene" uid="uid://wg6js8wittoa" path="res://Casa/Props/Librero/librero.tscn" id="3_kpqtg"]
 [ext_resource type="PackedScene" uid="uid://djy6xnfincquf" path="res://Sofi/pj.tscn" id="4_gqtlg"]
@@ -202,7 +201,6 @@ size = Vector2(91.46, 38.635)
 
 [node name="Node2D" type="Node2D" unique_id=1260422469]
 y_sort_enabled = true
-script = ExtResource("1_f8iyc")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=166051213]
 offset_right = 40.0
