@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var texture_progress_bar: TextureProgressBar = $TextureProgressBar
-@export var siguienteEscena: String = "res://Casa/casa.tscn"
+@export var siguienteEscena: String = "res://Casa/cuarto.tscn"
 var progreso: Array[float] = []
 
 func _ready():

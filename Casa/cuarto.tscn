@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://dpujpn4plc01y"]
 
-[ext_resource type="Texture2D" uid="uid://c50ln71l6u10k" path="res://Casa/tiles_casa.png" id="2_6rk0h"]
-[ext_resource type="PackedScene" uid="uid://djy6xnfincquf" path="res://Jugador/pj.tscn" id="4_gqtlg"]
-[ext_resource type="PackedScene" uid="uid://xx4xi1qxjfs6" path="res://Jugador/hud.tscn" id="5_5a25m"]
-[ext_resource type="PackedScene" uid="uid://byk863ndc3eva" path="res://Enemigos/cocodrilo.tscn" id="6_swa4s"]
-[ext_resource type="AudioStream" uid="uid://b7057l5nacutd" path="res://Casa/FNAF 4 Ambience Extended Mix.mp3" id="10_rdjrl"]
-[ext_resource type="Script" uid="uid://xx5thf5txeqk" path="res://Casa/bañito.gd" id="11_y5lpq"]
+[ext_resource type="Texture2D" uid="uid://c50ln71l6u10k" path="res://Casa/tiles_casa.png" id="1_wf8hv"]
+[ext_resource type="PackedScene" uid="uid://djy6xnfincquf" path="res://Jugador/pj.tscn" id="2_qcvik"]
+[ext_resource type="AudioStream" uid="uid://b7057l5nacutd" path="res://Casa/FNAF 4 Ambience Extended Mix.mp3" id="3_0ugd8"]
+[ext_resource type="Script" uid="uid://xx5thf5txeqk" path="res://Casa/bañito.gd" id="4_sg4kx"]
+[ext_resource type="PackedScene" uid="uid://xx4xi1qxjfs6" path="res://Jugador/hud.tscn" id="5_jpl1j"]
+[ext_resource type="PackedScene" uid="uid://byk863ndc3eva" path="res://Enemigos/cocodrilo.tscn" id="6_wbfuv"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ld3ao"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -23,7 +23,7 @@ polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pnlk0"]
-texture = ExtResource("2_6rk0h")
+texture = ExtResource("1_wf8hv")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 1
@@ -182,7 +182,7 @@ scale = Vector2(3.115, 3.115)
 tile_map_data = PackedByteArray("AAADAAAAAAABAAMAAAACAAAAAAABAAMAAAABAAAAAAABAAMAAAAAAAAAAAABAAMAAAAFAAAAAAABAAMAAAAEAAAAAAABAAMAAAAFAAIAAAAAAAUAAAAEAAIAAAABAAQAAAADAAIAAAABAAQAAAADAAMAAAABAAUAAAAFAAMAAAAAAAUAAAAFAAEAAAAAAAUAAAAEAAMAAAABAAUAAAAEAAEAAAABAAQAAAADAAEAAAABAAQAAAACAAMAAAABAAUAAAACAAIAAAABAAQAAAACAAEAAAABAAQAAAABAAMAAAABAAUAAAABAAIAAAABAAQAAAABAAEAAAABAAQAAAAAAAMAAAABAAUAAAAAAAIAAAABAAQAAAAAAAEAAAABAAQAAAAAAAQAAAACAAMAAAABAAQAAAACAAMAAAACAAQAAAACAAMAAAADAAQAAAACAAMAAAAEAAQAAAACAAMAAAAFAAQAAAAAAAUAAAD//wQAAAACAAMAAAD//wMAAAABAAUAAAD//wIAAAABAAQAAAD//wEAAAABAAQAAAD//wAAAAABAAMAAAD+/wQAAAACAAMAAAD+/wMAAAABAAUAAAD+/wIAAAABAAQAAAD+/wEAAAABAAQAAAD+/wAAAAABAAMAAAD9/wQAAAACAAMAAAD9/wMAAAABAAUAAAD9/wIAAAABAAQAAAD9/wEAAAABAAQAAAD9/wAAAAABAAMAAAD8/wQAAAACAAMAAAD8/wMAAAABAAUAAAD8/wIAAAABAAQAAAD8/wEAAAABAAQAAAD8/wAAAAABAAMAAAD7/wQAAAACAAMAAAD7/wMAAAABAAUAAAD7/wIAAAABAAQAAAD7/wEAAAABAAQAAAD7/wAAAAABAAMAAAD6/wQAAAAAAAQAAAD6/wMAAAAAAAQAAAD6/wIAAAAAAAQAAAD6/wEAAAAAAAQAAAD6/wAAAAABAAMAAAAFAAgAAAAAAAUAAAAFAAcAAAAAAAUAAAAFAAYAAAAAAAUAAAAFAAUAAAAAAAUAAAAEAAgAAAACAAMAAAAEAAcAAAACAAMAAAAEAAYAAAAAAAMAAAAEAAUAAAACAAMAAAADAAgAAAACAAMAAAADAAcAAAACAAMAAAADAAYAAAACAAMAAAADAAUAAAACAAMAAAACAAgAAAACAAMAAAACAAcAAAACAAMAAAACAAYAAAACAAMAAAACAAUAAAACAAMAAAABAAgAAAACAAMAAAABAAcAAAACAAMAAAABAAYAAAACAAMAAAABAAUAAAAAAAMAAAAAAAgAAAACAAMAAAAAAAcAAAACAAMAAAAAAAYAAAACAAMAAAAAAAUAAAACAAMAAAD//wgAAAACAAMAAAD//wcAAAACAAMAAAD//wYAAAAAAAMAAAD//wUAAAACAAMAAAD+/wgAAAACAAMAAAD+/wcAAAACAAMAAAD+/wYAAAACAAMAAAD+/wUAAAACAAMAAAD9/wgAAAACAAMAAAD9/wcAAAACAAMAAAD9/wYAAAACAAMAAAD9/wUAAAACAAMAAAD8/wgAAAACAAMAAAD8/wcAAAACAAMAAAD8/wYAAAACAAMAAAD8/wUAAAACAAMAAAD7/wgAAAACAAMAAAD7/wcAAAACAAMAAAD7/wYAAAACAAMAAAD7/wUAAAACAAMAAAD6/wgAAAAAAAQAAAD6/wcAAAAAAAQAAAD6/wYAAAAAAAQAAAD6/wUAAAAAAAQAAAD5/wAAAAABAAMAAAD5/wEAAAABAAMAAAD5/wIAAAABAAMAAAD5/wMAAAABAAMAAAD5/wQAAAABAAMAAAD5/wUAAAABAAMAAAD5/wYAAAABAAMAAAD5/wcAAAABAAMAAAD5/wgAAAABAAMAAAAGAAAAAAABAAMAAAAGAAEAAAABAAMAAAAGAAIAAAABAAMAAAAGAAMAAAABAAMAAAAGAAQAAAABAAMAAAAGAAUAAAABAAMAAAAGAAYAAAABAAMAAAAGAAcAAAABAAMAAAAGAAgAAAABAAMAAAD6/wkAAAABAAMAAAAFAAkAAAABAAMAAAD6/woAAAABAAMAAAD7/woAAAABAAMAAAD8/woAAAABAAMAAAD9/woAAAABAAMAAAD+/woAAAABAAMAAAD//woAAAABAAMAAAAAAAoAAAABAAMAAAABAAoAAAABAAMAAAACAAoAAAABAAMAAAADAAoAAAABAAMAAAAEAAoAAAABAAMAAAAFAAoAAAABAAMAAAD7/wkAAAACAAMAAAD8/wkAAAACAAMAAAD9/wkAAAACAAMAAAD+/wkAAAACAAMAAAD//wkAAAACAAMAAAAAAAkAAAACAAMAAAABAAkAAAACAAMAAAACAAkAAAACAAMAAAADAAkAAAACAAMAAAAEAAkAAAACAAMAAAA=")
 tile_set = SubResource("TileSet_yf5fn")
 
-[node name="CharacterBody2D" parent="." unique_id=1788580782 instance=ExtResource("4_gqtlg")]
+[node name="CharacterBody2D" parent="." unique_id=1788580782 instance=ExtResource("2_qcvik")]
 y_sort_enabled = true
 position = Vector2(564, 180.99997)
 
@@ -190,14 +190,14 @@ position = Vector2(564, 180.99997)
 environment = SubResource("Environment_g4v7s")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1703497726]
-stream = ExtResource("10_rdjrl")
+stream = ExtResource("3_0ugd8")
 autoplay = true
 bus = &"Ambience"
 parameters/looping = true
 
 [node name="bañito" type="Area2D" parent="." unique_id=1761652085]
 position = Vector2(1460, 526)
-script = ExtResource("11_y5lpq")
+script = ExtResource("4_sg4kx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bañito" unique_id=1351575116]
 position = Vector2(-10.718079, -12.818024)
@@ -205,11 +205,11 @@ shape = SubResource("RectangleShape2D_djfhu")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=767703536]
 visible = false
-color = Color(0.024332466, 0.022977458, 0.11621066, 1)
+color = Color(0.023529412, 0.023529412, 0.11764706, 1)
 
-[node name="CanvasLayer" parent="." unique_id=1988704000 instance=ExtResource("5_5a25m")]
+[node name="CanvasLayer" parent="." unique_id=1988704000 instance=ExtResource("5_jpl1j")]
 
-[node name="Crocodille" parent="." unique_id=1671842100 instance=ExtResource("6_swa4s")]
+[node name="Crocodille" parent="." unique_id=1671842100 instance=ExtResource("6_wbfuv")]
 position = Vector2(632, 343)
 
 [connection signal="body_entered" from="bañito" to="bañito" method="_on_body_entered"]

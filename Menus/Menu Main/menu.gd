@@ -7,15 +7,18 @@ extends Control
 @export var link_itch: String
 @export var link_importante: String
 @onready var music: AudioStreamPlayer2D = $music
+@onready var start: TextureRect = $start
 
 func _ready() -> void:
 	music.play()
 	color_rect.visible = false
+	start.visible = false
 
 func _on_start_pressed() -> void:
 	play.play()
 	music.stop()
 	color_rect.visible = true
+	start.visible = true
 	interaccion.play("interaction")
 	await get_tree().create_timer(2).timeout
 	Transicion.change_scene("res://Menus/Carga/loading.tscn")
