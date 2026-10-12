@@ -17,7 +17,7 @@ polygon = PackedVector2Array(48, 43, 33, 43, 33, 34, 48, 34)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lswvp"]
 size = Vector2(140, 83)
 
-[node name="StaticBody2D" type="Node2D" unique_id=910497087]
+[node name="Mesa" type="Node2D" unique_id=910497087]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1784611528]
 
