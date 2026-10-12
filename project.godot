@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PROTI-SEMINARIO"
-run/main_scene="uid://bstid7ojvudjq"
+run/main_scene="uid://dpujpn4plc01y"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
