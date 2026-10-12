@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://djy6xnfincquf"]
 
-[ext_resource type="Texture2D" uid="uid://c5xamuyl3b7er" path="res://Sofi/pj.png" id="1_42lni"]
-[ext_resource type="Script" uid="uid://bibuwu138ymva" path="res://Sofi/pj.gd" id="1_s0ygi"]
-[ext_resource type="Texture2D" uid="uid://dwqi478tbhknk" path="res://Sofi/linterna.png" id="3_5yaw4"]
-[ext_resource type="AudioStream" uid="uid://hbbsew4m5dn0" path="res://Sofi/👣👣 Pasos 🏃🏻🧩Normales 🦵🏻 Normal Steps Sound Effect (HD).mp3" id="4_6et5p"]
-[ext_resource type="AudioStream" uid="uid://cs1cgwv1kunxw" path="res://Sofi/Mujer Joven Respirando Asustada 🔊- Efecto de Sonido.mp3" id="5_5y4kc"]
-[ext_resource type="Texture2D" uid="uid://bmqce8hj6s3um" path="res://Sofi/space.png" id="6_1al5a"]
+[ext_resource type="Texture2D" uid="uid://c5xamuyl3b7er" path="res://Jugador/pj.png" id="1_42lni"]
+[ext_resource type="Script" uid="uid://bibuwu138ymva" path="res://Jugador/pj.gd" id="1_s0ygi"]
+[ext_resource type="Texture2D" uid="uid://dwqi478tbhknk" path="res://Jugador/linterna.png" id="3_5yaw4"]
+[ext_resource type="AudioStream" uid="uid://hbbsew4m5dn0" path="res://Jugador/👣👣 Pasos 🏃🏻🧩Normales 🦵🏻 Normal Steps Sound Effect (HD).mp3" id="4_6et5p"]
+[ext_resource type="AudioStream" uid="uid://cs1cgwv1kunxw" path="res://Jugador/Mujer Joven Respirando Asustada 🔊- Efecto de Sonido.mp3" id="5_5y4kc"]
+[ext_resource type="Texture2D" uid="uid://bmqce8hj6s3um" path="res://Jugador/space.png" id="6_1al5a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1al5a"]
 atlas = ExtResource("1_42lni")
@@ -119,7 +119,7 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1.44, 0)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1788580782 groups=["player"]]
-scale = Vector2(3, 3)
+scale = Vector2(3.115, 3.115)
 script = ExtResource("1_s0ygi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=593330095]
@@ -132,13 +132,13 @@ position = Vector2(0.33333325, 11)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1178094030]
-position = Vector2(0.99999994, -4.6666665)
+position = Vector2(2.284111, -4.666667)
 rotation = 1.5707964
 scale = Vector2(0.14610393, 0.47077948)
-color = Color(0.9, 0.87, 0, 1)
-energy = 0.5
+color = Color(0.5603712, 0.54129374, 5.7756904e-07, 1)
+energy = 0.7
 shadow_enabled = true
-shadow_item_cull_mask = 3
+shadow_item_cull_mask = 2
 texture = ExtResource("3_5yaw4")
 offset = Vector2(-1.2856522, 171.34981)
 

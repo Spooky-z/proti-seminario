@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://byk863ndc3eva"]
+
+[ext_resource type="Texture2D" uid="uid://bcgvet1ilesvh" path="res://11610911542206283.jpeg" id="1_nf41g"]
+[ext_resource type="Script" uid="uid://b7186cpt4r2q4" path="res://Enemigos/crocodille.gd" id="1_pq5xi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guh18"]
+size = Vector2(370, 370)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_djfhu"]
+radius = 1120.0
+
+[node name="Crocodille" type="CharacterBody2D" unique_id=1671842100 groups=["enemies"]]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_pq5xi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1805058099]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_nf41g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1411562677]
+shape = SubResource("RectangleShape2D_guh18")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=341942755]
+
+[node name="Vision" type="Area2D" parent="." unique_id=642654037]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Vision" unique_id=1858384999]
+position = Vector2(-10, -92)
+polygon = PackedVector2Array(0, 0, -800, -151, -800, 151)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1065675888]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1716552571]
+shape = SubResource("CircleShape2D_djfhu")
+
+[connection signal="body_entered" from="Vision" to="." method="_on_vision_body_entered"]

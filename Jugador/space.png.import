@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5xamuyl3b7er"
-path="res://.godot/imported/pj.png-593c19ec4a36543b7d3f938b0bac827b.ctex"
+uid="uid://bmqce8hj6s3um"
+path="res://.godot/imported/space.png-1d848857d036ce579aac99094b0f9122.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sofi/pj.png"
-dest_files=["res://.godot/imported/pj.png-593c19ec4a36543b7d3f938b0bac827b.ctex"]
+source_file="res://Jugador/space.png"
+dest_files=["res://.godot/imported/space.png-1d848857d036ce579aac99094b0f9122.ctex"]
 
 [params]
 
