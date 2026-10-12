@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://xx5thf5txeqk" path="res://Casa/bañito.gd" id="4_sg4kx"]
 [ext_resource type="PackedScene" uid="uid://xx4xi1qxjfs6" path="res://Jugador/hud.tscn" id="5_jpl1j"]
 [ext_resource type="PackedScene" uid="uid://byk863ndc3eva" path="res://Enemigos/cocodrilo.tscn" id="6_wbfuv"]
+[ext_resource type="PackedScene" uid="uid://b1f8xy76va7fg" path="res://Casa/Props/Mesa/mesa.tscn" id="7_qcvik"]
+[ext_resource type="PackedScene" uid="uid://wg6js8wittoa" path="res://Casa/Props/Librero/librero.tscn" id="8_0ugd8"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ld3ao"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -173,6 +175,12 @@ adjustment_saturation = 1.5
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_djfhu"]
 size = Vector2(91.46, 38.635)
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_guh18"]
+vertices = PackedVector2Array(807.03125, 213, 807.96094, 486.8672, 804, 382, 804, 323, 526, 372, 688, 323, 688, 382, 341.96094, 481.1172, 526, 310, 410, 372, 341.03125, 213, 410, 310)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(5, 4, 8, 0), PackedInt32Array(2, 1, 7, 6), PackedInt32Array(9, 4, 7), PackedInt32Array(9, 7, 10, 11), PackedInt32Array(11, 10, 0, 8), PackedInt32Array(0, 3, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(331, 203, 332, 491, 818, 497, 817, 203)])
+source_geometry_mode = 1
+
 [node name="Node2D" type="Node2D" unique_id=1260422469]
 y_sort_enabled = true
 
@@ -211,5 +219,14 @@ color = Color(0.023529412, 0.023529412, 0.11764706, 1)
 
 [node name="Crocodille" parent="." unique_id=1671842100 instance=ExtResource("6_wbfuv")]
 position = Vector2(632, 343)
+
+[node name="Mesa" parent="." unique_id=910497087 groups=["navigation_polygon_source_geometry_group"] instance=ExtResource("7_qcvik")]
+position = Vector2(468, 319)
+
+[node name="Librero" parent="." unique_id=1639202878 groups=["navigation_polygon_source_geometry_group"] instance=ExtResource("8_0ugd8")]
+position = Vector2(746, 312)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=71116801]
+navigation_polygon = SubResource("NavigationPolygon_guh18")
 
 [connection signal="body_entered" from="bañito" to="bañito" method="_on_body_entered"]

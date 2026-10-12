@@ -50,6 +50,7 @@ script = ExtResource("4_hcixf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1989913830]
 position = Vector2(2, 19.5)
 shape = SubResource("RectangleShape2D_lswvp")
+debug_color = Color(0, 0.64651567, 0.24259588, 0.41960785)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

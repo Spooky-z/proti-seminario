@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://byk863ndc3eva"]
 
 [ext_resource type="Texture2D" uid="uid://bcgvet1ilesvh" path="res://11610911542206283.jpeg" id="1_nf41g"]
-[ext_resource type="Script" uid="uid://b7186cpt4r2q4" path="res://Enemigos/crocodille.gd" id="1_pq5xi"]
+[ext_resource type="Script" uid="uid://b7186cpt4r2q4" path="res://Enemigos/cocodrilo.gd" id="1_pq5xi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_guh18"]
 size = Vector2(370, 370)
 
-[node name="Crocodille" type="CharacterBody2D" unique_id=1671842100]
-scale = Vector2(0.5, 0.5)
+[node name="Cocodrilo" type="CharacterBody2D" unique_id=1671842100]
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_pq5xi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1805058099]
