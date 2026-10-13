@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dihyfcjx47qri"]
+
+[ext_resource type="Texture2D" uid="uid://b2jp1k800luym" path="res://Casa/Props/Closet/closet.png" id="1_gn4i2"]
+[ext_resource type="Texture2D" uid="uid://dwmcqyddb5ny7" path="res://Casa/Props/Closet/closetNORMAL.png" id="2_mk3jf"]
+[ext_resource type="Script" uid="uid://diit8bv8tv5qq" path="res://Casa/Props/Mesa/escondite.gd" id="3_mk3jf"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_yf5fn"]
+diffuse_texture = ExtResource("1_gn4i2")
+normal_texture = ExtResource("2_mk3jf")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(25.040127, 12.841089)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_g4v7s"]
+polygon = PackedVector2Array(12.520063, 19.90369, -12.520063, 19.90369, -12.520063, 7.0626, 12.520063, 7.0626)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cxkq"]
+size = Vector2(34.349922, 26.003212)
+
+[node name="Closet" type="Node2D" unique_id=1395986115]
+scale = Vector2(3.115, 3.115)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=216931466]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1738203081]
+texture = SubResource("CanvasTexture_yf5fn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2059245100]
+position = Vector2(0, 13.483145)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D" unique_id=1521268212]
+occluder = SubResource("OccluderPolygon2D_g4v7s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=595478020]
+script = ExtResource("3_mk3jf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=468158579]
+position = Vector2(-0.1605112, 17.495985)
+shape = SubResource("RectangleShape2D_4cxkq")
+debug_color = Color(0, 0.64651567, 0.24259588, 0.41960785)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

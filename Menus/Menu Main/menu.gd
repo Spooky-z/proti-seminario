@@ -8,15 +8,19 @@ extends Control
 @export var link_importante: String
 @onready var music: AudioStreamPlayer2D = $music
 @onready var start: TextureRect = $start
+@onready var intro: AnimationPlayer = $Intro
+@onready var menu_art: TextureRect = $MenuArt
 
 func _ready() -> void:
 	music.play()
 	color_rect.visible = false
 	start.visible = false
+	intro.play("intro")
 
 func _on_start_pressed() -> void:
 	play.play()
 	music.stop()
+	menu_art.visible = false
 	color_rect.visible = true
 	start.visible = true
 	interaccion.play("interaction")

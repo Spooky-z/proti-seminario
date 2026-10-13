@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://byk863ndc3eva" path="res://Enemigos/cocodrilo.tscn" id="6_wbfuv"]
 [ext_resource type="PackedScene" uid="uid://b1f8xy76va7fg" path="res://Casa/Props/Mesa/mesa.tscn" id="7_qcvik"]
 [ext_resource type="PackedScene" uid="uid://wg6js8wittoa" path="res://Casa/Props/Librero/librero.tscn" id="8_0ugd8"]
+[ext_resource type="PackedScene" uid="uid://dihyfcjx47qri" path="res://Casa/Props/Closet/closet.tscn" id="9_sg4kx"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ld3ao"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -220,13 +221,17 @@ color = Color(0.023529412, 0.023529412, 0.11764706, 1)
 [node name="Crocodille" parent="." unique_id=1671842100 instance=ExtResource("6_wbfuv")]
 position = Vector2(632, 343)
 
-[node name="Mesa" parent="." unique_id=910497087 groups=["navigation_polygon_source_geometry_group"] instance=ExtResource("7_qcvik")]
+[node name="Mesa" parent="." unique_id=910497087 groups=["hiding_spots", "navigation_polygon_source_geometry_group"] instance=ExtResource("7_qcvik")]
 position = Vector2(468, 319)
 
 [node name="Librero" parent="." unique_id=1639202878 groups=["navigation_polygon_source_geometry_group"] instance=ExtResource("8_0ugd8")]
 position = Vector2(746, 312)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=71116801]
+visible = false
 navigation_polygon = SubResource("NavigationPolygon_guh18")
+
+[node name="Closet" parent="." unique_id=1395986115 groups=["hiding_spots"] instance=ExtResource("9_sg4kx")]
+position = Vector2(696, 162)
 
 [connection signal="body_entered" from="bañito" to="bañito" method="_on_body_entered"]
