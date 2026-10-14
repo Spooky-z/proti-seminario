@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bstid7ojvudjq"]
 
 [ext_resource type="Script" uid="uid://b8cfkqumbdxc3" path="res://Menus/Intro/intro.gd" id="1_fwsbl"]
-[ext_resource type="Texture2D" uid="uid://c2tks5p751gqo" path="res://HURVINbWkAEs1E.png" id="2_nd847"]
+[ext_resource type="Texture2D" uid="uid://cycf3h6aav607" path="res://logospookystudio.png" id="2_fwsbl"]
 
 [sub_resource type="Animation" id="Animation_55j0v"]
 length = 0.001
@@ -49,9 +49,9 @@ offset_bottom = 649.0
 color = Color(0, 0, 0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1332972373]
-position = Vector2(576, 324)
+position = Vector2(576, 354)
 scale = Vector2(0.4910314, 0.49103138)
-texture = ExtResource("2_nd847")
+texture = ExtResource("2_fwsbl")
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1353144116]
 offset_left = -8.0

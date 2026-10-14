@@ -35,33 +35,34 @@ func _physics_process(_delta: float) -> void:
 	if hiding:
 		velocity = Vector2.ZERO
 	volver()
+	esconderse()
 	move_and_slide()
  
-func _input(event):
-	var direction := Input.get_vector("izquierda", "derecha", "arriba", "abajo")
-	if puede_esconderse:
-		hide_input.visible = true
-	else:
-		hide_input.visible = false
-	if event.is_action_pressed("agacharse") and puede_esconderse:
-		var objetos = get_tree().get_nodes_in_group("hiding_spots")
-		if objetos.size() > 0:
-			var objeto = objetos[0]
-			if not hiding:
-				og_pos = global_position
-				global_position = objeto.global_position + Vector2(0, 0)
-				hiding = true
-				point_light_2d.visible = false
-				z_index = -1
-				velocity = direction * 0
-				if not llorona.playing:
-					llorona.play()
-			else:
-				global_position = og_pos
-				z_index = 0
-				point_light_2d.visible = true
-				hiding = false
-				llorona.stop()
+#func _input(event):
+	#var direction := Input.get_vector("izquierda", "derecha", "arriba", "abajo")
+	#if puede_esconderse:
+		#hide_input.visible = true
+	#else:
+		#hide_input.visible = false
+	#if event.is_action_pressed("agacharse") and puede_esconderse:
+		#var objetos = get_tree().get_nodes_in_group("hiding_spots")
+		#if objetos.size() > 0:
+			#var objeto = objetos[0]
+			#if not hiding:
+				#og_pos = global_position
+				#global_position = objeto.global_position + Vector2(0, 0)
+				#hiding = true
+				#point_light_2d.visible = false
+				#z_index = -1
+				#velocity = direction * 0
+				#if not llorona.playing:
+					#llorona.play()
+			#else:
+				#global_position = og_pos
+				#z_index = 0
+				#point_light_2d.visible = true
+				#hiding = false
+				#llorona.stop()
 
 
 func volver():

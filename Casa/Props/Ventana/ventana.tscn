@@ -76,11 +76,13 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=930821144]
+light_mask = 6
 position = Vector2(-3, 121)
 scale = Vector2(1.8000014, 1)
 color = Color(0.51759493, 0.6075986, 1, 1)
 energy = 0.5
 shadow_enabled = true
+shadow_item_cull_mask = 2
 texture = ExtResource("5_2x6nm")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=371143559]

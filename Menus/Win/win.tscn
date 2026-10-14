@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://deskoydouaouj"]
+
+[ext_resource type="Script" uid="uid://3y2shsrm8lgd" path="res://Menus/Game Over/gameover.gd" id="1_lbn52"]
+[ext_resource type="FontFile" uid="uid://dqnaiondj0p6j" path="res://Menus/Menu Main/DK Black Bamboo.ttf" id="2_7o0qs"]
+[ext_resource type="Texture2D" uid="uid://b6r88q36h0p20" path="res://Menus/Win/pantalla_de_victoria.png" id="2_54j14"]
+[ext_resource type="FontFile" uid="uid://drp44api5audn" path="res://Menus/settings/W95F.otf" id="3_54j14"]
+[ext_resource type="AudioStream" uid="uid://dgr6ftehgwg6b" path="res://Menus/Menu Main/cancelMenu.ogg" id="4_7o0qs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4v7s"]
+texture = ExtResource("2_54j14")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4p1d"]
+bg_color = Color(0, 0, 0, 0.7294118)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa1b0"]
+bg_color = Color(1, 1, 1, 0.78431374)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o3ip"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" unique_id=1750731566]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lbn52")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1457054357]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=1789430566]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 246.0
+offset_right = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g4v7s")
+
+[node name="Label" type="Label" parent="." unique_id=1078902068]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -468.0
+offset_top = 46.0
+offset_right = 264.0
+offset_bottom = 147.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.94509804, 0.9529412, 0.9529412, 1)
+theme_override_fonts/font = ExtResource("2_7o0qs")
+theme_override_font_sizes/font_size = 105
+text = "you WIN"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1810461493]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.25
+offset_top = 82.0
+offset_right = 82.25
+offset_bottom = 215.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Restart" type="Button" parent="VBoxContainer" unique_id=286293387]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = ExtResource("3_54j14")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_o4p1d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oa1b0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2o3ip")
+text = "RESTART"
+
+[node name="Menu" type="Button" parent="VBoxContainer" unique_id=958128889]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_fonts/font = ExtResource("3_54j14")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_o4p1d")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oa1b0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2o3ip")
+text = "MENU"
+
+[node name="option" type="AudioStreamPlayer2D" parent="." unique_id=1466393184]
+stream = ExtResource("4_7o0qs")
+volume_db = -5.0
+bus = &"SFX"
+
+[connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_quit_pressed"]

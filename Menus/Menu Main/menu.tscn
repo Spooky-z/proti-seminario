@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://jcfq2cutl3le" path="res://Menus/Menu Main/itch2.png" id="5_b4t0d"]
 [ext_resource type="Texture2D" uid="uid://7ccp6t1plcrj" path="res://Menus/Menu Main/menuPELIGRO.png" id="5_crmd2"]
 [ext_resource type="Texture2D" uid="uid://dsiuknsfmdinx" path="res://Menus/Menu Main/itch1.png" id="6_qcfqq"]
-[ext_resource type="Texture2D" uid="uid://bjnh8n6nlkrcl" path="res://momonga.png" id="7_nyr1q"]
+[ext_resource type="Texture2D" uid="uid://cycf3h6aav607" path="res://logospookystudio.png" id="10_crmd2"]
 [ext_resource type="AudioStream" uid="uid://dy20h1c1sjc0v" path="res://Menus/Menu Main/FNAF 4 Main Menu Theme.mp3" id="11_b4t0d"]
 [ext_resource type="PackedScene" uid="uid://xx4xi1qxjfs6" path="res://Jugador/hud.tscn" id="14_giin1"]
 
@@ -31,7 +31,13 @@ texture = ExtResource("5_b4t0d")
 texture = ExtResource("6_qcfqq")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fcnqv"]
-texture = ExtResource("7_nyr1q")
+texture = ExtResource("10_crmd2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y17cg"]
+texture = ExtResource("10_crmd2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_giin1"]
+texture = ExtResource("10_crmd2")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
 bg_color = Color(0, 0, 0, 0.29411766)
@@ -107,70 +113,58 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Credits:position")
+tracks/2/path = NodePath("../Quit:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(290, 511)]
+"values": [Vector2(290, 561)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../Quit:position")
+tracks/3/path = NodePath("../Label:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(290, 561)]
+"values": [Vector2(307, 47)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../Label:position")
+tracks/4/path = NodePath("../itch:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(307, 47)]
+"values": [Vector2(739, 580)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../itch:position")
+tracks/5/path = NodePath("../Button:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(739, 580)]
+"values": [Vector2(807, 580)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../Button:position")
+tracks/6/path = NodePath("../Label:theme_override_colors/font_color")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(807, 580)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../Label:theme_override_colors/font_color")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -207,70 +201,58 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Credits:position")
+tracks/2/path = NodePath("../Quit:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.07, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 511), Vector2(290, 511)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Quit:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0.13666667, 0.46666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 561), Vector2(290, 561)]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Label:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Label:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0.6, 0.9, 1.1333333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(307, -149), Vector2(307, -57.451416), Vector2(307, 47)]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../itch:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../itch:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "times": PackedFloat32Array(0.2, 0.4980532),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(739, 661), Vector2(739, 580)]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../Button:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Button:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0.3027531, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(807, 661), Vector2(807, 580)]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../Label:theme_override_colors/font_color")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Label:theme_override_colors/font_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0.8, 1.1436772),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -345,10 +327,12 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_3gngh")
 layout_mode = 0
 offset_left = 807.0
 offset_top = 580.0
-offset_right = 815.0
-offset_bottom = 588.0
+offset_right = 817.0223
+offset_bottom = 590.0223
 scale = Vector2(7.0842104, 7.0842104)
 theme_override_styles/normal = SubResource("StyleBoxTexture_fcnqv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_y17cg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_giin1")
 
 [node name="Start" type="Button" parent="." unique_id=233325807]
 layout_mode = 0
@@ -378,21 +362,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_lti8b")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ouk20")
 text = "SETTINGS"
-alignment = 0
-
-[node name="Credits" type="Button" parent="." unique_id=881121901]
-layout_mode = 0
-offset_left = 290.0
-offset_top = 511.0
-offset_right = 457.99994
-offset_bottom = 537.0
-theme_override_colors/font_color = Color(0.8745098, 0.94509804, 0.7372549, 1)
-theme_override_fonts/font = ExtResource("4_7ticv")
-theme_override_font_sizes/font_size = 26
-theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_lti8b")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ouk20")
-text = "CREDITS"
 alignment = 0
 
 [node name="Quit" type="Button" parent="." unique_id=1621509928]

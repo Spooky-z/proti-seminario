@@ -6,7 +6,7 @@ func _on_start_pressed() -> void:
 	var bus = AudioServer.get_bus_index("Musica")
 	AudioServer.set_bus_mute(bus, true)
 	option.play()
-	Transicion.change_scene("res://Casa/casa.tscn")
+	Transicion.change_scene("res://Casa/cuarto.tscn")
 
 func _on_quit_pressed() -> void:
 	option.play()
