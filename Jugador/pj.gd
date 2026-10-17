@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+class_name Player
 
 const SPEED = 200
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -14,6 +15,7 @@ var puede_esconderse: bool = false
 func _ready():
 	hide_input.visible = false
 	og_pos = global_position
+	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
 
 func _physics_process(_delta: float) -> void:
 	var direction := Input.get_vector("izquierda", "derecha", "arriba", "abajo")
@@ -38,6 +40,9 @@ func _physics_process(_delta: float) -> void:
 	esconderse()
 	move_and_slide()
  
+func _on_spawn(position: Vector2, direction: String):
+	global_position = position
+
 #func _input(event):
 	#var direction := Input.get_vector("izquierda", "derecha", "arriba", "abajo")
 	#if puede_esconderse:

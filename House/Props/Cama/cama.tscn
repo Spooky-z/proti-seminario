@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://2mdynqsfaihc"]
+
+[ext_resource type="Texture2D" uid="uid://c6fa5aomf8570" path="res://House/Props/Cama/cama.png" id="1_yjmin"]
+[ext_resource type="Texture2D" uid="uid://ovvfsvw20q2r" path="res://House/Props/Cama/camaNORMAL.png" id="2_wgqkd"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_yf5fn"]
+diffuse_texture = ExtResource("1_yjmin")
+normal_texture = ExtResource("2_wgqkd")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(33, 29)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_g4v7s"]
+polygon = PackedVector2Array(-21.508827, -8.988764, -21.508827, 19.90369, 10.593901, 19.90369, 10.593901, 17.977528, 20.545746, 17.977528, 20.545746, 17.014446, 21.508827, 17.014446, 21.508827, 16.051365, 19.261637, 16.051365, 19.261637, 15.088282, 18.619583, 15.088282, 18.619583, 10.9149275, 17.335472, 10.9149275, 17.335472, 4.1733546, 16.37239, 4.1733546, 16.37239, -7.0626, 15.409309, -7.0626, 15.409309, -8.025682, 13.483146, -8.025682, 13.483146, -8.988764)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1779665390]
+scale = Vector2(3.115, 3.115)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=237266675]
+texture = SubResource("CanvasTexture_yf5fn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=695684931]
+position = Vector2(-4.5, 5.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=617365450]
+occluder = SubResource("OccluderPolygon2D_g4v7s")

@@ -14,3 +14,11 @@ offset_right = 1152.0
 offset_bottom = 648.0
 pivot_offset = Vector2(281, 0)
 color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=2046082590]
+z_index = 1
+offset_left = 272.0
+offset_top = 400.0
+offset_right = 880.0
+offset_bottom = 648.0
+color = Color(0.7937, 0, 0.04748764, 1)

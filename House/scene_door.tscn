@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dji5b8ue56vf6"]
+
+[ext_resource type="Script" uid="uid://4ch4rwbpbyoc" path="res://HDoor.gd" id="1_swekl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+
+[node name="Area2D" type="Area2D" unique_id=494655824]
+script = ExtResource("1_swekl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=849221951]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=825409258]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PROTI-SEMINARIO"
-run/main_scene="uid://bstid7ojvudjq"
+run/main_scene="uid://dpujpn4plc01y"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://djxp5r0ad1ci2"
 
 Transicion="*uid://clfk8q3aeoxul"
 Config="*uid://dc2ep27umcrtp"
+NavigationManager="*uid://2fxot0gix0j3"
 
 [display]
 
@@ -69,6 +70,11 @@ agacharse={
 esc={
 "deadzone": 0.2,
 "events": []
+}
+interaction={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
 }
 
 [physics]

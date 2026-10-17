@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://eq46tfeg2lov" path="res://Menus/Menu Main/menu.gd" id="1_hbriq"]
 [ext_resource type="Texture2D" uid="uid://icsow33iqagi" path="res://Menus/Menu Main/menu.png" id="2_2414w"]
-[ext_resource type="Shader" uid="uid://b2cbfldjgs7e4" path="res://Casa/Props/Ventana/ventana.gdshader" id="2_piath"]
+[ext_resource type="Shader" uid="uid://b2cbfldjgs7e4" path="res://House/Props/Ventana/ventana.gdshader" id="2_piath"]
 [ext_resource type="FontFile" uid="uid://dqnaiondj0p6j" path="res://Menus/Menu Main/DK Black Bamboo.ttf" id="3_1vhfa"]
 [ext_resource type="Texture2D" uid="uid://ce5q7pawgbclr" path="res://Menus/Menu Main/menushader.png" id="3_crmd2"]
 [ext_resource type="FontFile" uid="uid://drp44api5audn" path="res://Menus/settings/W95F.otf" id="4_7ticv"]
@@ -408,6 +408,7 @@ bus = &"SFX"
 [node name="music" type="AudioStreamPlayer2D" parent="." unique_id=1203225776]
 stream = ExtResource("11_b4t0d")
 autoplay = true
+bus = &"Musica"
 
 [node name="CanvasLayer" parent="." unique_id=1988704000 instance=ExtResource("14_giin1")]
 
